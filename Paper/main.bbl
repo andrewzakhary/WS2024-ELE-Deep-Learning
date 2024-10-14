@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{10.1007/978-981-10-0575-6_1}
+Koichi Masukawa.
+\newblock The origins of board games and ancient game boards.
+\newblock In Toshiyuki Kaneda, Hidehiko Kanegae, Yusuke Toyoda, and Paola
+  Rizzi, editors, {\em Simulation and Gaming in the Network Society}, pages
+  3--11, Singapore, 2016. Springer Singapore.
+
+\bibitem{simpson2007earliest}
+SJ~Simpson and ILE Finkel.
+\newblock The earliest board games in the middle east, 2007.
+
+\bibitem{shotwell1994game}
+Peter Shotwell.
+\newblock The game of go: Speculations on its origins and symbolism in ancient
+  china.
+\newblock {\em Changes}, 2008:1--62, 1994.
+
+\bibitem{shannon1950xxii}
+Claude~E Shannon.
+\newblock Xxii. programming a computer for playing chess.
+\newblock {\em The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science}, 41(314):256--275, 1950.
+
+\bibitem{inproceedings}
+Snehalika Lall, Arup~Kumar Sadhu, Amit Konar, Kalyan Mallik, and Sanchita
+  Ghosh.
+\newblock Multi-agent reinfocement learning for stochastic power management in
+  cognitive radio network.
+\newblock 01 2016.
+
+\end{thebibliography}
