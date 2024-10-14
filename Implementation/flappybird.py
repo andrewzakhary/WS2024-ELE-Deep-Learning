@@ -7,11 +7,13 @@ import os
 from random import randint
 from collections import deque
 
+import neat.population
 import pygame
 from pygame.locals import *
-
-
-FPS = 60
+import neat
+import matplotlib.pyplot as plt
+Gen=0
+FPS = 30
 ANIMATION_SPEED = 0.18  # pixels per millisecond
 WIN_WIDTH = 284 * 2     # BG image size: 284x512 px; tiled twice
 WIN_HEIGHT = 512
@@ -69,6 +71,9 @@ class Bird(pygame.sprite.Sprite):
         self._img_wingup, self._img_wingdown = images
         self._mask_wingup = pygame.mask.from_surface(self._img_wingup)
         self._mask_wingdown = pygame.mask.from_surface(self._img_wingdown)
+        self.vel=0
+        self.height=self.y
+        self.tick_count=0
 
     def update(self, delta_frames=1):
         """Update the bird's position.
@@ -92,6 +97,34 @@ class Bird(pygame.sprite.Sprite):
             self.msec_to_climb -= frames_to_msec(delta_frames)
         else:
             self.y += Bird.SINK_SPEED * frames_to_msec(delta_frames)
+        
+    def jump(self):
+        """
+        make the bird jump
+        :return: None
+        """
+        self.vel = -10
+        self.tick_count = 0
+        self.height = self.y
+
+    def move(self):
+        """
+        make the bird move
+        :return: None
+        """
+        self.tick_count += 1
+
+        # for downward acceleration
+        displacement = self.vel*(self.tick_count) + 0.5*(3)*(self.tick_count)**2  # calculate displacement
+
+        # terminal velocity
+        if displacement >= 16:
+            displacement = (displacement/abs(displacement)) * 16
+
+        if displacement < 0:
+            displacement -= 2
+
+        self.y = self.y + displacement
 
     @property
     def image(self):
@@ -157,7 +190,7 @@ class PipePair(pygame.sprite.Sprite):
     PIECE_HEIGHT = 32
     ADD_INTERVAL = 3000
 
-    def __init__(self, pipe_end_img, pipe_body_img):
+    def __init__(self, pipe_end_img, pipe_body_img,bottom_pieces=0,top_pieces=0):
         """Initialises a new random PipePair.
 
         The new PipePair will automatically be assigned an x attribute of
@@ -242,6 +275,36 @@ class PipePair(pygame.sprite.Sprite):
         """
         return pygame.sprite.collide_mask(self, bird)
 
+def plot_stats(statistics, ylog=False, view=False, filename='avg_fitness.svg'):
+    generation = range(len(statistics.most_fit_genomes))
+    avg_fitness = statistics.get_fitness_mean()
+    highest_fitness_scores = [gen.fitness for gen in statistics.most_fit_genomes]
+
+    # Create subplots: 1 row, 2 columns (side by side), or 2 rows and 1 column (one on top of the other)
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))  # 1 row, 2 columns
+
+    # First subplot: Average Fitness per Generation
+    ax1.plot(generation, avg_fitness, label="Average Fitness", color='green')
+    ax1.set_title("Average Fitness per Generation")
+    ax1.set_xlabel("Generation")
+    ax1.set_ylabel("Fitness")
+    ax1.legend()
+
+    # Second subplot: Highest Fitness per Generation
+    ax2.plot(generation, highest_fitness_scores, label="Best Fitness", color='blue')
+    ax2.set_title("Highest Fitness per Generation")
+    ax2.set_xlabel("Generation")
+    ax2.set_ylabel("Fitness")
+    ax2.legend()
+
+    if ylog:
+        plt.yscale('log')
+
+    plt.grid()
+    plt.savefig(filename)
+
+    if view:
+        plt.show()
 
 def load_images():
     """Load all images required by the game and return a dict of them.
@@ -307,13 +370,14 @@ def msec_to_frames(milliseconds, fps=FPS):
     return fps * milliseconds / 1000.0
 
 
-def main():
+def main(genomes,config):
     """The application's entry point.
 
     If someone executes this module (instead of importing it, for
     example), this function is called.
     """
-
+    global Gen
+    Gen += 1
     pygame.init()
 
     display_surface = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
@@ -326,13 +390,16 @@ def main():
     # the bird stays in the same x position, so bird.x is a constant
     # center bird on screen
     # bird = 
-    birds=[Bird(20, int(WIN_HEIGHT/2 - Bird.HEIGHT/2), 2,
-                (images['bird-wingup'], images['bird-wingdown'])),Bird(50, 90, 2,
-                (images['bird-wingup'], images['bird-wingdown']))]
+    birds=[]
     ge=[]
     nets=[]
-
-
+    for _,g in genomes:
+        net=neat.nn.FeedForwardNetwork.create(g,config)
+        nets.append(net)
+        birds.append(Bird(20, int(WIN_HEIGHT/2 - Bird.HEIGHT/2), 2,
+                (images['bird-wingup'], images['bird-wingdown'])))
+        g.fitness=0
+        ge.append(g)
     pipes = deque()
 
     frame_clock = 0  # this counter is only incremented if the game isn't paused
@@ -346,26 +413,25 @@ def main():
         if not (paused or frame_clock % msec_to_frames(PipePair.ADD_INTERVAL)):
             pp = PipePair(images['pipe-end'], images['pipe-body'])
             pipes.append(pp)
-
-        for e in pygame.event.get():
-            if e.type == QUIT or (e.type == KEYUP and e.key == K_ESCAPE):
-                done = True
-                break
-            elif e.type == KEYUP and e.key in (K_PAUSE, K_p):
-                paused = not paused
-            elif e.type == MOUSEBUTTONUP or (e.type == KEYUP and
-                    e.key in (K_UP, K_RETURN, K_SPACE)):
-                for bird in birds:
-                    bird.msec_to_climb = Bird.CLIMB_DURATION
-
+        for x,bird in enumerate(birds):
+            ge[x].fitness +=0.1
+            bird.move()
+            output = nets[x].activate((bird.y-pipes[0].bottom_pieces*32,bird.y-pipes[0].top_pieces*32))
+            # if pygame.time.get_ticks() % 500 >= 250:
+            if(output[0]>0.5):
+                bird.jump()
+                    # print(f'x= {x} action = {output}')
         if paused:
             continue  # don't draw anything
 
         # check for collisions
-        for bird in birds: 
+        for x,bird in enumerate(birds): 
             pipe_collision = any(p.collides_with(bird) for p in pipes)
             if pipe_collision or 0 >= bird.y or bird.y >= WIN_HEIGHT - Bird.HEIGHT:
-                done = True
+                ge[x].fitness -= 1
+                birds.pop(x)
+                nets.pop(x)
+                ge.pop(x)
 
             for x in (0, WIN_WIDTH / 2):
                 display_surface.blit(images['background'], (x, 0))
@@ -376,7 +442,7 @@ def main():
         for p in pipes:
             p.update()
             display_surface.blit(p.image, p.rect)
-        for bird in birds:
+        for x,bird in enumerate(birds):
             bird.update()
             display_surface.blit(bird.image, bird.rect)
 
@@ -384,19 +450,42 @@ def main():
             for p in pipes:
                 if p.x + PipePair.WIDTH < bird.x and not p.score_counted:
                     score += 1
+                    ge[x].fitness +=5
                     p.score_counted = True
 
         score_surface = score_font.render(str(score), True, (255, 255, 255))
+        Gen_surface = score_font.render('Gen : '+str(Gen), True, (255, 255, 255))
+        pop_surface = score_font.render('Alive : '+str(len(ge)), True, (255, 255, 255))
         score_x = WIN_WIDTH/2 - score_surface.get_width()/2
         display_surface.blit(score_surface, (score_x, PipePair.PIECE_HEIGHT))
+        display_surface.blit(Gen_surface, (20, PipePair.PIECE_HEIGHT))
+        display_surface.blit(pop_surface, (20, PipePair.PIECE_HEIGHT+40))
 
+        if len(ge)==0:
+            break
         pygame.display.flip()
         frame_clock += 1
+        if score>15:
+            break
     print('Game over! Score: %i' % score)
-    pygame.quit()
-
+    # pygame.quit()
+def run(config_path):
+    import pickle
+    config = neat.config.Config(neat.DefaultGenome, neat.DefaultReproduction,
+                        neat.DefaultSpeciesSet, neat.DefaultStagnation,
+                        config_path)
+    p=neat.Population(config)
+    p.add_reporter(neat.StdOutReporter(True))
+    stats = neat.StatisticsReporter()
+    p.add_reporter(stats)
+    winner = p.run(main, 150)
+    with open('simple_nn_model.pkl', 'wb') as f:
+    # Step 2: Save the model using pickle
+        pickle.dump(winner, f)
+    plot_stats(stats,view=True)
 
 if __name__ == '__main__':
-    # If this module had been imported, __name__ would be 'flappybird'.
-    # It was executed (e.g. by double-clicking the file), so call main.
-    main()
+    local_dir=os.path.dirname(__file__)
+    config_path=os.path.join(local_dir,'config-feedforward.txt')
+    run(config_path)
+    
