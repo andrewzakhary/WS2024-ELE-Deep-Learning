@@ -30,4 +30,21 @@ Snehalika Lall, Arup~Kumar Sadhu, Amit Konar, Kalyan Mallik, and Sanchita
   cognitive radio network.
 \newblock 01 2016.
 
+\bibitem{graesser2019foundations}
+L.~Graesser and W.L. Keng.
+\newblock {\em Foundations of Deep Reinforcement Learning: Theory and Practice
+  in Python}.
+\newblock Addison-Wesley Data \& Analytics Series. Pearson Education, 2019.
+
+\bibitem{kelleher2019deep}
+John~D Kelleher.
+\newblock {\em Deep learning}.
+\newblock MIT press, 2019.
+
+\bibitem{article}
+Facundo Bre, Juan Gimenez, and Víctor Fachinotti.
+\newblock Prediction of wind pressure coefficients on building surfaces using
+  artificial neural networks.
+\newblock {\em Energy and Buildings}, 158, 11 2017.
+
 \end{thebibliography}

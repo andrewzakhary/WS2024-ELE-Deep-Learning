@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.23)  14 OCT 2024 15:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.23)  16 OCT 2024 21:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -340,14 +340,25 @@ Package pdftex.def Info: Reinforcement-Learning-block-diagram.png  used on inpu
 t line 50.
 (pdftex.def)             Requested size: 126.0pt x 88.00954pt.
 
-(main.bbl
-Underfull \vbox (badness 4084) has occurred while \output is active []
-
- [1{C:/Users/andre/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/a
-ndre/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+[1{C:/Users/andre/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/an
+dre/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
-])
+]
+<nn.png, id=14, 853.1875pt x 499.8675pt>
+File: nn.png Graphic file (type png)
+<use nn.png>
+Package pdftex.def Info: nn.png  used on input line 71.
+(pdftex.def)             Requested size: 252.0pt x 147.64268pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Citation `chollet2021deep' on page 2 undefined on input line 76.
+
+
+(main.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -359,34 +370,37 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
-
- <./Reinforcement-Learning-block-diagram.png>] (main.aux)
+[2 <./Reinforcement-Learning-block-diagram.png> <./nn.png>] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 4333 strings out of 474486
- 69044 string characters out of 5743755
- 1940542 words of memory out of 5000000
- 26584 multiletter control sequences out of 15000+600000
- 590271 words of font info for 93 fonts, out of 8000000 for 9000
+ 4351 strings out of 474486
+ 69299 string characters out of 5743755
+ 1941542 words of memory out of 5000000
+ 26601 multiletter control sequences out of 15000+600000
+ 591378 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,70p,1308b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,8n,70p,1404b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmr10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr7.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTe
-X/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andre/AppData/Local/Programs/MiKTe
-X/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/andre/AppData/Local/Programs/MiKT
-eX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andre/AppData/Local/Programs/MiKT
-eX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 115137 bytes).
+fonts/cm/cmmi7.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr7.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andre/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andre/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/andre/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andre/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (2 pages, 211933 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
