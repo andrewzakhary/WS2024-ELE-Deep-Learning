@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.23)  16 OCT 2024 21:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.23)  31 OCT 2024 12:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -272,45 +272,70 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \minrowclearance=\skip58
 \rownum=\count284
 )
+(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count285
+\lst@gtempboxa=\box57
+\lst@token=\toks26
+\lst@length=\count286
+\lst@currlwidth=\dimen177
+\lst@column=\count287
+\lst@pos=\count288
+\lst@lostspace=\dimen178
+\lst@width=\dimen179
+\lst@newlines=\count289
+\lst@lineno=\count290
+\lst@maxwidth=\dimen180
+
+(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count291
+\lst@skipnumbers=\count292
+\lst@framebox=\box58
+)
+(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count285
-\l__pdf_internal_box=\box57
+\l__color_backend_stack_int=\count293
+\l__pdf_internal_box=\box59
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 -- Lines per column: 56 (exact).
 
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count286
-\scratchdimen=\dimen177
-\scratchbox=\box58
-\nofMPsegments=\count287
-\nofMParguments=\count288
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count289
-\MPscratchDim=\dimen178
-\MPnumerator=\count290
-\makeMPintoPDFobject=\count291
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count294
+\scratchdimen=\dimen181
+\scratchbox=\box60
+\nofMPsegments=\count295
+\nofMParguments=\count296
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count297
+\MPscratchDim=\dimen182
+\MPnumerator=\count298
+\makeMPintoPDFobject=\count299
+\everyMPtoPDFconversion=\toks28
 )
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -322,12 +347,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+\c@lstlisting=\count300
+LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
 
  (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
 
 
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -337,7 +363,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: Reinforcement-Learning-block-diagram.png Graphic file (type png)
 <use Reinforcement-Learning-block-diagram.png>
 Package pdftex.def Info: Reinforcement-Learning-block-diagram.png  used on inpu
-t line 50.
+t line 79.
 (pdftex.def)             Requested size: 126.0pt x 88.00954pt.
 
 [1{C:/Users/andre/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/an
@@ -348,17 +374,28 @@ dre/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 <nn.png, id=14, 853.1875pt x 499.8675pt>
 File: nn.png Graphic file (type png)
 <use nn.png>
-Package pdftex.def Info: nn.png  used on input line 71.
+Package pdftex.def Info: nn.png  used on input line 100.
 (pdftex.def)             Requested size: 252.0pt x 147.64268pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<DRL.png, id=15, 642.4pt x 434.62375pt>
+File: DRL.png Graphic file (type png)
+<use DRL.png>
+Package pdftex.def Info: DRL.png  used on input line 111.
+(pdftex.def)             Requested size: 176.39923pt x 119.34615pt.
+[2 <./Reinforcement-Learning-block-diagram.png> <./nn.png> <./DRL.png>]
+(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
+35.
 
-LaTeX Warning: Citation `chollet2021deep' on page 2 undefined on input line 76.
-
-
-(main.bbl)
+(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+[3] (main.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -370,37 +407,35 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2 <./Reinforcement-Learning-block-diagram.png> <./nn.png>] (main.aux)
+[4] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 4351 strings out of 474486
- 69299 string characters out of 5743755
- 1941542 words of memory out of 5000000
- 26601 multiletter control sequences out of 15000+600000
- 591378 words of font info for 94 fonts, out of 8000000 for 9000
+ 6252 strings out of 474486
+ 94496 string characters out of 5743755
+ 2054542 words of memory out of 5000000
+ 28484 multiletter control sequences out of 15000+600000
+ 593187 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,70p,1404b,266s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,8n,70p,1404b,1376s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmmi10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmmi7.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmr7.pfb><C:/Users/andre/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/andre/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andre/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/andre/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andre/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 211933 bytes).
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/andre/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/andre/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andre/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/andre/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andre/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (4 pages, 283824 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

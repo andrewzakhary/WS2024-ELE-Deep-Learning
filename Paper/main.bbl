@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{10.1007/978-981-10-0575-6_1}
 Koichi Masukawa.
@@ -46,5 +46,27 @@ Facundo Bre, Juan Gimenez, and Víctor Fachinotti.
 \newblock Prediction of wind pressure coefficients on building surfaces using
   artificial neural networks.
 \newblock {\em Energy and Buildings}, 158, 11 2017.
+
+\bibitem{chollet2021deep}
+Francois Chollet.
+\newblock {\em Deep learning with Python}.
+\newblock Simon and Schuster, 2021.
+
+\bibitem{drl}
+Wei Wang, Hui Liu, Wangqun Lin, Ying Chen, and Jun'an Yang.
+\newblock Investigation on works and military applications of artificial
+  intelligence.
+\newblock {\em IEEE Access}, PP:1--1, 07 2020.
+
+\bibitem{Wilken_FlappyBird}
+Timo Wilken.
+\newblock Flappy bird using pygame, 2020.
+\newblock GitHub repository. Accessed: 2024-10-27.
+
+\bibitem{1299918}
+C.~Witt.
+\newblock Population size vs. runtime of a simple ea.
+\newblock In {\em The 2003 Congress on Evolutionary Computation, 2003. CEC
+  '03.}, volume~3, pages 1996--2003 Vol.3, 2003.
 
 \end{thebibliography}

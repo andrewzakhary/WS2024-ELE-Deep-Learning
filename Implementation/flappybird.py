@@ -418,7 +418,7 @@ def main(genomes,config):
             bird.move()
             output = nets[x].activate((bird.y-pipes[0].bottom_pieces*32,bird.y-pipes[0].top_pieces*32))
             # if pygame.time.get_ticks() % 500 >= 250:
-            if(output[0]>0.5):
+            if(output[0]>0):
                 bird.jump()
                     # print(f'x= {x} action = {output}')
         if paused:
@@ -479,7 +479,7 @@ def run(config_path):
     stats = neat.StatisticsReporter()
     p.add_reporter(stats)
     winner = p.run(main, 150)
-    with open('simple_nn_model.pkl', 'wb') as f:
+    with open('winner_model.pkl', 'wb') as f:
     # Step 2: Save the model using pickle
         pickle.dump(winner, f)
     plot_stats(stats,view=True)

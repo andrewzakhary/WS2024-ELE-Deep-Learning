@@ -5,9 +5,38 @@
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
+
 \usepackage{textcomp}
 \usepackage[table]{xcolor}
 \usepackage{xcolor}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
@@ -37,9 +66,9 @@ Deep learning, Reinforcement learning, artificial intelligence, video games
 \end{IEEEkeywords}
 
 \section{Introduction}
-Games have been a large part of our human society and history from the beginning. Evidence was found that early humans used $Talus bones$ as rudimentary dice as early as 10,000 years B.C\cite{10.1007/978-981-10-0575-6_1       }. As human society developed so did the games they played. The first board game found was in the Levant, dating back to around 7,500 years ago \cite{simpson2007earliest} with a couple of rows of holes carved into limestone. from then on board games developed more complexity from the relative simplicity of games as $Mancala$ in the Mediterranean to $Senet$ in Egypt to $Go$ in chine, which is the  oldest board game of mental skill in the world that is still being played\cite{shotwell1994game}. Games like $Go$ and $Chess$ (previously $chatarunga$) captivated the minds of humans for centuries because they are so complex that no one human could ever master them. This is due to the vast number of possible variations in a single game. In chess for example a typical game is around 40 moves, this could lead $10^{120}$ possible positions according to Claude Shanon\cite{shannon1950xxii}.
+Games have been a large part of our human society and history from the beginning. Evidence was found that early humans used \text{Talus bones} as rudimentary dice as early as 10,000 B.C\cite{10.1007/978-981-10-0575-6_1       }. As human society developed so did the games they played. The first board game found was in the Levant, dating back to around 7,500 years ago \cite{simpson2007earliest} with a couple of rows of holes carved into limestone. from then on board games developed more complexity from the relative simplicity of games as $Mancala$ in the Mediterranean to $Senet$ in Egypt to $Go$ in China, which is the  oldest board game of mental skill in the world that is still being played\cite{shotwell1994game}. Games like $Go$ and $Chess$ (previously $Chaturanga$) captivated the minds of humans for centuries because they are so complex that no one human could ever master them. This is due to the vast number of possible variations in a single game. In chess for example a typical game is around 40 moves, this could lead $10^{120}$ possible positions according to Claude Shannon\cite{shannon1950xxii}.
 
-In the last decades though, games have found their renaissance with the new technological revolution. The invention of the computer allowed games to take on a new shape. It's highly argued what could count as the first $video game$ because the exact definition of the word $game$ is contested. what could be said with certainty though is that video games started around the 1950s in research facilities. After that video games became commercially available such as $Computer Space$ in 1971 and $Pong$ in 1971. $Pong$ Specially was important for the fact that the user could play against a computer system (commonly known as $Game-AI$ afterwards). From the late 80s and early 90s video games established themselves as a mean of entertainment and art. The growing capabilities of computers allowed the creation of more complex games till our current day.
+In the last decades though, games have found their renaissance with the new technological revolution. The invention of the computer allowed games to take on a new shape. It's highly argued what could count as the first \text{video game} because the exact definition of the word $game$ is contested. what could be said with certainty though is that video games started around the 1950s in research facilities. Afterwards, video games became commercially available such as \text{Computer Space} in 1971 and $Pong$ in 1971. $Pong$ was specially important for the fact that the user could play against a computer system (commonly known as $Game-AI$ afterwards). From the late 80s and early 90s video games established themselves as a means of both entertainment and art. The growing capabilities of computers allowed the creation of more complex games till our current day.
 
 With the growing computational power available also came the need for more powerful AI systems. AI systems developments proved to be essential for developing solutions that would have been very difficult using normal computational methods. In recent history multiple methods for developing such systems as supervised learning, unsupervised learning, reinforcement learning, deep learning and transfer learning among many others. A lot of effort has been put recently in the scope of developing AI systems that can play video games by themselves. This is due to the fact that video games can be a stepping stone in generating AI systems that have ability to work alongside humans in their tasks. Similar to the real world, many video games have an environment where the player is free to do a set of actions and only at the end of a set of time would he know if he was successful or not. The AI model would then need to learn the patterns that succeed and and unlearn the patterns that don't. This is why methods as Reinforcement Learning and Deep Reinforcement Learning are ideal in many video games playing situations. In this paper the workings of a Deep Reinforcement Learning model is explained as well as showing an implementation of such a model using a $Python$ script.
 \section{Basic Concepts}
@@ -65,7 +94,7 @@ The reward function could be summarized as in equation \ref{reward} where $\gamm
 
 \subsection{Deep Learning}
 
-Deep learning is a method of machine learning that depends on the use of neural networks\cite{kelleher2019deep}. Neural network consist mainly of 3 parts or layers, Input layer, hidden layer(s) and an output layer. The number of hidden layers can vary depending on the complexity and parameters of the problem that is to be solved with the model. An example of such a network can be shown in figure \ref{fig:nn}. Each point in the network is called a $node$ and the lines between each node is called a connection. Each connection has a specific $weight$. Similar to how our brains learn where with each repetition of a piece of information or performing a specific action, the connection between the neurons firing together gets stronger, so do the weights in a neural network. Given an example of a labelling task for photos of resolution 640*480 photos of traffic lights, in this case the input layer would have $640*480=307200$ nodes representing each pixel for each image and only 1 output node. If the output node has a value of more 0.5 then the system is guessing it's a traffic light. In the middle all that's happening is that each pixel is transformed into a value (usually [0,1]) and then a series of matrices multiplications is performed by the values of the weights which sum to the final value at the output node.
+Deep learning is a method of machine learning that depends on the use of neural networks\cite{kelleher2019deep}. Neural networks consist mainly of 3 parts or layers, input layer, hidden layer(s) and an output layer. The number of hidden layers can vary depending on the complexity and parameters of the problem that is to be solved with the model. An example of such a network can be shown in figure \ref{fig:nn}. Each point in the network is called a $node$ and the lines between each node is called a connection. Each connection has a specific $weight$. Similar to how our brains learn where with each repetition of a piece of information or performing a specific action, the connection between the neurons firing together gets stronger, so do the weights in a neural network. Given an example of a labelling task for photos of resolution 640*480 photos of traffic lights, in this case the input layer would have $640*480=307200$ nodes representing each pixel for each image and only 1 output node. If the output node has a value of more 0.5 then the system is guessing it's a traffic light. In the middle all that's happening is that each pixel is transformed into a value (usually [0,1]) and then a series of matrices multiplications is performed by the values of the weights which sum to the final value at the output node.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\linewidth]{nn.png}
@@ -76,12 +105,83 @@ Deep learning is a method of machine learning that depends on the use of neural 
 A deep learning model is usually first trained on a set of data where the answer is already known. In the training phase the model would be experimenting with various weights and comparing its outputs with the correct answers of the data set. The degree of correctness of the model is calculated by what's usually called a \textit{loss function}\cite{chollet2021deep}. After the prediction is made and measured the \textit{loss function} the model needs to adjust itself in order to be more accurate. This is where the \textit{optimizer} plays a role. This is also a function that reworks the model (or rather the weights) in order to make it more probable to get a less \textit{loss} next test.
 \subsection{Deep Reinforcement Learning}
 
-DRL is a method of machine learning which combines both RL and DL. The model in essence is an RL model with all the same properties, i.e rewards,states and actions,,etc. but the different thing is that the "learning" is happening on a neural network level. This means that each input is also mapped to a node where weights are created between it and the output. In this case however, the loss functions is replaced by the reward action from equation \ref{reward}. 
+DRL is a method of machine learning which combines both RL and DL. The model in essence is an RL model with all the same properties, i.e rewards,states and actions,...,etc. but the different thing is that the "learning" is happening on a neural network level, as could be seen in figure \ref{fig:DRL}. This means that the policy of the agent that's used to produce the action is using deep learning to be developed while the reward and the state are fed into the agent as if it was a normal RL model.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{DRL.png}
+	\caption{Overview of a DRL model\cite{drl}}
+	\label{fig:DRL}
+\end{figure}
 \section{Implementation}
 
-\subsection{Methodology}
+As an example for an implementation of DRL in video games playing, The game of \textit{Flappy Bird} is selected. This is a side scroller game which consists of a bird that can jump between pipes. The pipes are generated with random lengths keeping the distance between them fixed at a predefined length. The game is recreated using \textit{Pygame}. The version used in this implementation is done by Timo Wilken\cite{Wilken_FlappyBird} and used in accordance with the MIT license approved by the creator. For the DRL model, the python library NEAT (NeuroEvolution of Augmenting Topologies) is used for the agent's policy generation. 
 
-\subsection{Example}
+
+NEAT algorithm is a genetic algorithm that generates neural networks. A distinguishing factor between NEAT and standard NN developments is that the NNs generated by NEAT can have different shapes that it categorizes into species. This allows the for the  competition of different network structures at one time instead of needing to have separate runs for different topologies which saves time to reach an optimal network. The NEAT algorithm though needs some parameters which are defined in a config file. As with many approaches in ML, these parameters need some trial and error to find a sweet spot that learns at an optimal rate. Some of the important parameters are defined in the following sections.
+\subsection{Parameters}
+\subsubsection{NEAT parameters}
+This section contains parameters as
+\begin{itemize}[]
+	\item  \textbf{fitness\_criterion} : This defines how to evaluate the fitness of \textit{genomes}. In this implementation it is set to \textit{max} as we evaluate the bird that travelled the most distance to be the most successful.
+	\item \textbf{fitness\_threshold} : This sets an upper for the fitness of an individual to conclude the NN generation. In this implementation this is set to 200. This means that if an individual reaches a fitness of 200 or higher the algorithm will not generate individuals after this one reach the end of it's life.
+	\item \textbf{pop\_size} This sets the population size of \textit{genomes} per generation. This is completely arbitrary and only dependant on the resources available on the machine running the algorithm. In this example it is set to 150 per generation. It's important to note that any population size should -in theory- reach the same optimal result at the end but at a much larger runtime. It has been shown that the relation between size of generation and the runtime to be exponential in nature\cite{1299918}
+
+\end{itemize}
+\subsubsection{Default Genome Parameters}
+\begin{itemize}
+	\item \textbf{activation\_default} : this is the default activation function for the NN which maps the inputs of the node to predefined range of values instead of working with the raw data fed into it. In this example a \textit{tanh} activation function is defined which allows for a range of [-1,1]. As a result at the output node, it is checked if the value is above zero, then the bird jumps.
+	\item \textbf{num\_hidden} : this is the number of hidden layers between the inputs and output. As with other parameters this can be tested to find the values that provides the best performance. 
+	\item \textbf{num\_inputs} : this defines the number of input nodes for the model. In this implementation 2 inputs were given. These are the vertical distance between the bird and the top and bottom edges of the pipe. This is calculated by the following code snippet.
+	\begin{lstlisting}[language=Python, caption=Calculating inputs]
+		nets[x].activate((bird.y-pipes[0].bottom_pieces*32,bird.y-pipes[0].top_pieces*32))	\end{lstlisting}
+	This gets the first pipe as there can be two pipes showing on the screen at the same time. These pipes are composed of sections which are 32 pixels high. The number of sections os multiplied by the height of section which is subtracted from the Y position of the bird in order to calculate the vertical distance between the bird and the two pipe segments.
+	\item \textbf{num\_output} : this is the number of output nodes of the model. In this example only one output is needed to activate the jump mechanic.
+	\item \textbf{bias\_mutate\_power} : This specifies the magnitude of bias change for individual nodes. This is responsible for adding random numbers to a node value in order to avoid zero values and get different variations in individuals.
+	\item \textbf{bias\_mutate\_rate} : This specifies the frequency of bias change for individual nodes. In this example a mutation rate of 0.8 and magnitude of 0.5 are used.
+\end{itemize}
+\subsection{Code snippets}
+In this section, snippets of code are explained in order to give an overview of how the NEAT algorithm is implemented.
+
+
+In the following code snippet we can see the \textit{run} function defined. This is responsible for running the NEAT algorithm according the predefined configurations which is given as an input parameter.  At line 2 the library pickle is used to save the best performing model for later usage if needed. \textit{p} is initialized as the population according to the config file. At line 7 a \textit{reporter} is added which gives insights into the evaluation for each \textit{genome} of each generation. The next line runs the algorithm on the \textit{main} function with a limit of 150 generations or until the aforementioned \textit{fitness\_threshold}. After running the main fucntion and using the \textit{pickle} library to save the best performing model, the evaluation is plotted using the \textit{plot\_stats} function. In the lines 14 to 17 the code defines that if the this file run (and not for example imported), it should start calling the \textit{run} function.
+\begin{lstlisting}[language=Python, caption=Run function]
+def run(config_path):
+	import pickle
+	config = neat.config.Config(neat.DefaultGenome,neat.DefaultReproduction,neat.DefaultSpeciesSet,neat.DefaultStagnation,config_path)
+	p=neat.Population(config)
+	p.add_reporter(neat.StdOutReporter(True))
+	stats = neat.StatisticsReporter()
+	p.add_reporter(stats)
+	winner = p.run(main, 150)
+	with open('winner_model.pkl', 'wb') as f:
+		# Step 2: Save the model using pickle
+		pickle.dump(winner, f)
+	plot_stats(stats,view=True)
+	
+	if __name__ == '__main__':
+		local_dir=os.path.dirname(__file__)
+		config_path=os.path.join(local_dir,'config-feedforward.txt')
+		run(config_path))\end{lstlisting}
+
+In the following section a part of the \textit{main} function is shown. In the beginning the global variable \textit{Gen} is incremented, this is used later on the display to show the current generation. the \textit{pygame.init()} command is used on line 3 in order to start the game. Since the model has multiple individuals playing the game at the same time, it is necessary to create multiple birds. these are saved in the \textit{birds} list. The products on the NEAT algorithm are split into genomes and networks. These are saved in the \textit{ge} and \textit{nets} lists respectively. Genomes are data structures that encode how the network looks like (i.e weights, number of nodes, biases,..etc) and networks are what controls the player in this context. In the loop created at line 11, each genome is iterated. For each genome a network is created in accordance with the config file and added to the \textit{nets} list and a bird is also created and added to the \textit{birds} list. every genome is initialized with fitness of zero and added to genome list \textit{ge}
+\begin{lstlisting}[language=Python, caption=main function]
+def main(genomes,config):
+	global Gen
+	Gen += 1
+	pygame.init()
+	.
+	.
+	.
+	birds=[]
+	ge=[]
+	nets=[]
+	for _,g in genomes:
+		net=neat.nn.FeedForwardNetwork.create(g,config)
+		nets.append(net)
+		birds.append(Bird(20, int(WIN_HEIGHT/2 - Bird.HEIGHT/2), 2,
+		(images['bird-wingup'], images['bird-wingdown'])))
+		g.fitness=0
+		ge.append(g)\end{lstlisting}
 
 \section{Conclusion}
 \bibliographystyle{unsrt} 
