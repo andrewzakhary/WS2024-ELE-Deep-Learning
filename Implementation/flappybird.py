@@ -428,7 +428,7 @@ def main(genomes,config):
         for x,bird in enumerate(birds): 
             pipe_collision = any(p.collides_with(bird) for p in pipes)
             if pipe_collision or 0 >= bird.y or bird.y >= WIN_HEIGHT - Bird.HEIGHT:
-                ge[x].fitness -= 1
+                # ge[x].fitness -= 1
                 birds.pop(x)
                 nets.pop(x)
                 ge.pop(x)
@@ -465,7 +465,7 @@ def main(genomes,config):
             break
         pygame.display.flip()
         frame_clock += 1
-        if score>15:
+        if score>25:
             break
     print('Game over! Score: %i' % score)
     # pygame.quit()

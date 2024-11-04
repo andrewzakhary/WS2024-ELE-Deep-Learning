@@ -5,7 +5,7 @@
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
-
+\usepackage{subfigure}
 \usepackage{textcomp}
 \usepackage[table]{xcolor}
 \usepackage{xcolor}
@@ -182,7 +182,36 @@ def main(genomes,config):
 		(images['bird-wingup'], images['bird-wingdown'])))
 		g.fitness=0
 		ge.append(g)\end{lstlisting}
+The main function is repeated for each generation until the required fitness is reached or the number of generations defined is exhausted.
+\section{Results analysis}
+Multiple runs were made with differing parameters and in this section a comparison is made between them. 
+\subsection{Number of hidden layers}
+\begin{figure}
+\centering
+\subfigure[]{\includegraphics[width=0.24\textwidth]{0_hidden_layers.png}} 
+\subfigure[]{\includegraphics[width=0.24\textwidth]{1_hidden_layers.png}} 
+\subfigure[]{\includegraphics[width=0.24\textwidth]{2_hidden_layers.png}}
+\caption{Average fitness and highest fitness per generation (a) 0 hidden layers (b) 1 hidden layer (c) 2 hidden layers}
+\label{fig:Hidden_layers}
+\end{figure}
+In figure \ref{fig:Hidden_layers} it can be seen the relation between generations and average fitness per generation and best performing genome per generation. The difference between them is stark in both the slope of the curve for average fitness and the number of generations required for an optimal solution.
 
+For the model with no hidden layers the slope of the average fitness is nearly flat and the number of generations required is around 60 generations. The flatness of the curve is a sign that there's hardly any development in between generations and the figuring out of the final solution is more of a random fluke. 
+
+In the model with 1 hidden layer the slope of the line looks more exponential in nature. This means that on average the average fitness per generation is improving. The number of generation needed is around 45 generations which is even lower than the model with no hidden layers.
+
+In the model with two hidden layers the slope looks even more exponential in nature than all other models. This shows the biggest growth in average fitness over generations. On the other side the number of generations required to pass the threshold is the highest with around 140 generations. This proves that even though the model is more complex and it looks like it's learning at a better rate, it can still take 100 generations more than the simpler model (with 1 hidden layer) to reach the same result.
+
+\subsection{Mutation rate}
+\begin{figure}[h!]
+	\centering
+	\subfigure[]{\includegraphics[width=0.24\textwidth]{0.2 rate.png}} 
+	\subfigure[]{\includegraphics[width=0.24\textwidth]{0.5 rate.png}} 
+	\subfigure[]{\includegraphics[width=0.24\textwidth]{0.8 rate.png}} 
+	\caption{Bias mutation rate and magintude vs average fitness and highest fitness per generation (a) 0.2  (b) 0.5  (c) 0.8}
+	\label{fig:mutations}
+\end{figure}
+In this section the values for bias mutation power and magnitude are changed and the effect is analysed. For the sake of comparison both parameters are set to the same values as shown in figure \ref{fig:mutations}. In this example the curve of the average fitness is somewhat random between all variations. The number generations needed to reach an optimal solution however is very different. With the values of 0.5 reaching the optimal solution at the quickest rate at 11 generations in comparison to the longest run at a mutation rate of 0.2 reaching the optimal solution after 52 generations. It's also important to note that the highest value for mutation came in the middle place with around 35 generations. This proves that -as with other parameters- for each problem there's a range of values that fit it best which need some variations in order to figure out. 
 \section{Conclusion}
 \bibliographystyle{unsrt} 
 \bibliography{refs}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.23)  31 OCT 2024 12:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.23)  4 NOV 2024 21:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -236,6 +236,27 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen173
 \Gin@req@width=\dimen174
+)
+(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/subfigure\subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip56
+\subfigcapskip=\skip57
+\subfigcaptopadj=\dimen175
+\subfigbottomskip=\skip58
+\subfigcapmargin=\dimen176
+\subfiglabelskip=\skip59
+\c@subfigure=\count284
+\c@lofdepth=\count285
+\c@subtable=\count286
+\c@lotdepth=\count287
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+(C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/subfigure\subfigure.cfg
+)
+\subfig@top=\skip60
+\subfig@bottom=\skip61
 ) (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
@@ -260,36 +281,36 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen175
+\col@sep=\dimen177
 \ar@mcellbox=\box55
-\extrarowheight=\dimen176
+\extrarowheight=\dimen178
 \NC@list=\toks24
-\extratabsurround=\skip56
-\backup@length=\skip57
+\extratabsurround=\skip62
+\backup@length=\skip63
 \ar@cellbox=\box56
 )
 \everycr=\toks25
-\minrowclearance=\skip58
-\rownum=\count284
+\minrowclearance=\skip64
+\rownum=\count288
 )
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count285
+\lst@mode=\count289
 \lst@gtempboxa=\box57
 \lst@token=\toks26
-\lst@length=\count286
-\lst@currlwidth=\dimen177
-\lst@column=\count287
-\lst@pos=\count288
-\lst@lostspace=\dimen178
-\lst@width=\dimen179
-\lst@newlines=\count289
-\lst@lineno=\count290
-\lst@maxwidth=\dimen180
+\lst@length=\count290
+\lst@currlwidth=\dimen179
+\lst@column=\count291
+\lst@pos=\count292
+\lst@lostspace=\dimen180
+\lst@width=\dimen181
+\lst@newlines=\count293
+\lst@lineno=\count294
+\lst@maxwidth=\dimen182
 
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count291
-\lst@skipnumbers=\count292
+\c@lstnumber=\count295
+\lst@skipnumbers=\count296
 \lst@framebox=\box58
 )
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
@@ -300,7 +321,7 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count293
+\l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box59
 ) (main.aux)
 \openout1 = `main.aux'.
@@ -325,16 +346,16 @@ LaTeX Font Info:    ... okay on input line 42.
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count294
-\scratchdimen=\dimen181
+\scratchcounter=\count298
+\scratchdimen=\dimen183
 \scratchbox=\box60
-\nofMPsegments=\count295
-\nofMParguments=\count296
+\nofMPsegments=\count299
+\nofMParguments=\count300
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count297
-\MPscratchDim=\dimen182
-\MPnumerator=\count298
-\makeMPintoPDFobject=\count299
+\MPscratchCnt=\count301
+\MPscratchDim=\dimen184
+\MPnumerator=\count302
+\makeMPintoPDFobject=\count303
 \everyMPtoPDFconversion=\toks28
 )
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -347,7 +368,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count300
+\c@lstlisting=\count304
 LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
 
  (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -395,7 +416,39 @@ LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
 (C:\Users\andre\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-[3] (main.bbl)
+[3]
+<0_hidden_layers.png, id=26, 867.24pt x 433.62pt>
+File: 0_hidden_layers.png Graphic file (type png)
+<use 0_hidden_layers.png>
+Package pdftex.def Info: 0_hidden_layers.png  used on input line 191.
+(pdftex.def)             Requested size: 123.84283pt x 61.9172pt.
+<1_hidden_layers.png, id=28, 867.24pt x 433.62pt>
+File: 1_hidden_layers.png Graphic file (type png)
+<use 1_hidden_layers.png>
+Package pdftex.def Info: 1_hidden_layers.png  used on input line 192.
+(pdftex.def)             Requested size: 123.84283pt x 61.9172pt.
+<2_hidden_layers.png, id=29, 867.24pt x 433.62pt>
+File: 2_hidden_layers.png Graphic file (type png)
+<use 2_hidden_layers.png>
+Package pdftex.def Info: 2_hidden_layers.png  used on input line 193.
+(pdftex.def)             Requested size: 123.84283pt x 61.9172pt.
+<0.2 rate.png, id=30, 867.24pt x 433.62pt>
+File: 0.2 rate.png Graphic file (type png)
+<use 0.2 rate.png>
+Package pdftex.def Info: 0.2 rate.png  used on input line 208.
+(pdftex.def)             Requested size: 123.84283pt x 61.9172pt.
+<0.5 rate.png, id=31, 867.24pt x 433.62pt>
+File: 0.5 rate.png Graphic file (type png)
+<use 0.5 rate.png>
+Package pdftex.def Info: 0.5 rate.png  used on input line 209.
+(pdftex.def)             Requested size: 123.84283pt x 61.9172pt.
+<0.8 rate.png, id=32, 867.24pt x 433.62pt>
+File: 0.8 rate.png Graphic file (type png)
+<use 0.8 rate.png>
+Package pdftex.def Info: 0.8 rate.png  used on input line 210.
+(pdftex.def)             Requested size: 123.84283pt x 61.9172pt.
+ [4 <./0_hidden_layers.png> <./1_hidden_layers.png> <./2_hidden_layers.png> <./
+0.2 rate.png> <./0.5 rate.png> <./0.8 rate.png>] (main.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -407,17 +460,19 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4] (main.aux)
+[5
+
+] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6252 strings out of 474486
- 94496 string characters out of 5743755
+ 6470 strings out of 474486
+ 98205 string characters out of 5743755
  2054542 words of memory out of 5000000
- 28484 multiletter control sequences out of 15000+600000
+ 28696 multiletter control sequences out of 15000+600000
  593187 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,8n,70p,1404b,1376s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -433,9 +488,9 @@ cal/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/andre/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/andre/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/andre/AppData/L
 ocal/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (4 pages, 283824 bytes).
+Output written on main.pdf (5 pages, 671490 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 91 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
